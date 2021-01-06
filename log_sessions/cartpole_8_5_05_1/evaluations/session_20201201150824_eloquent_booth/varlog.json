@@ -1,0 +1,1 @@
+{"meta": {"epoch": 2120, "episode": 52080, "frame": 52101120, "clock": 1606803229.2611215}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 806.405774, "max": 806.405774, "sum": 806.405774}}}

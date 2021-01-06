@@ -1,0 +1,172 @@
+agents:
+  agent:
+    methodargs:
+      clip_param: 0.1
+      entropy_coef: 0
+      max_grad_norm: 0.5
+      n_steps: 512
+      n_update: 10
+      use_clipped_value_loss: true
+      value_loss_coef: 0.5
+    name: agent
+    observation_path: /agent
+    optimargs:
+      eps: 1.0e-05
+      lr: 0.0003
+    optimname: torch.optim.Adam
+    policyargs:
+      act_space: &id001
+        dim: !!python/tuple
+        - 1
+        lim: !!python/tuple
+        - - -1.0
+        - - 1.0
+        typ: Box
+      modelargs:
+        output_size: 64
+        recurrent: true
+      modelname: digideep.model.models.MLPModel
+      obs_space: &id002
+        dim: !!python/tuple
+        - 5
+        lim: !!python/tuple
+        - - -10.0
+          - -10.0
+          - -10.0
+          - -10.0
+          - -10.0
+        - - 10.0
+          - 10.0
+          - 10.0
+          - 10.0
+          - 10.0
+        typ: Box
+    policyname: digideep.agent.ppo.Policy
+    sampler:
+      agent_name: agent
+      compute_advantages:
+        gamma: 0.99
+        tau: 0.95
+        use_gae: true
+      num_mini_batches: 2
+      observation_path: /agent
+      truncate_datalists:
+        n: 1
+    type: digideep.agent.ppo.Agent
+env: &id003
+  config:
+    action_space: !!python/object/apply:collections.OrderedDict
+    - - - agent
+        - *id001
+    env_type: digideep.environment.dmc2gym.wrapper
+    max_episode_steps: 1000
+    observation_space: !!python/object/apply:collections.OrderedDict
+    - - - /agent
+        - *id002
+  from_module: digideep.environment.dmc2gym
+  from_params: false
+  main_wrappers:
+    Monitor:
+      allow_early_resets: true
+      info_keywords: !!python/tuple []
+      reset_keywords: !!python/tuple []
+    WrapperDummyDictObs:
+      observation_key: agent
+    WrapperDummyMultiAgent:
+      agent_name: agent
+  name: DMBenchCartpoleSwingup-v0
+  norm_wrappers:
+  - args:
+      path: /agent
+    enabled: false
+    name: digideep.environment.wrappers.normal.WrapperLevelDictObs
+  - args:
+      paths:
+      - agent
+    enabled: false
+    name: digideep.environment.wrappers.normalizers.WrapperNormalizeActDict
+  vect_wrappers:
+  - args:
+      clip: 10
+      epsilon: 1.0e-08
+      paths:
+      - /agent
+    enabled: true
+    name: digideep.environment.wrappers.normalizers.VecNormalizeObsDict
+  - args:
+      clip: 10
+      epsilon: 1.0e-08
+      gamma: 0.99
+    enabled: true
+    name: digideep.environment.wrappers.normalizers.VecNormalizeRew
+explorer:
+  eval:
+    deterministic: true
+    do_reset: false
+    env: *id003
+    extra_env_kwargs: {}
+    final_action: false
+    mode: eval
+    n_episodes: 1
+    n_steps: null
+    num_workers: 1
+    render: true
+    render_delay: 0
+    seed: 101
+    warm_start: 0
+    win_size: -1
+  test:
+    deterministic: true
+    do_reset: false
+    env: *id003
+    extra_env_kwargs: {}
+    final_action: false
+    mode: test
+    n_episodes: 10
+    n_steps: null
+    num_workers: 24
+    render: false
+    render_delay: 0
+    seed: 100
+    warm_start: 0
+    win_size: 10
+  train:
+    deterministic: false
+    do_reset: false
+    env: *id003
+    extra_env_kwargs: {}
+    final_action: true
+    mode: train
+    n_episodes: null
+    n_steps: 512
+    num_workers: 24
+    render: false
+    render_delay: 0
+    seed: 0
+    warm_start: 0
+    win_size: 10
+memory:
+  train:
+    args:
+      buffer_chunk_len: 1
+      chunk_sample_len: 512
+      name: train
+      overrun: 1
+    type: digideep.memory.rollbuffer.Memory
+runner:
+  max_iter: null
+  max_time: 20
+  n_cycles: 2
+  n_epochs: 100000
+  name: digideep.pipeline.Runner
+  randargs:
+    cuda_deterministic: false
+    seed: 0
+  save_int: 10
+  test_act: true
+  test_int: 100
+session_cmd: python /home/hwang/Downloads/DMC_PICA-master-mynsng/digideep/main.py
+  --params digideep.params.mujoco_ppo --cpanel '{"model_name":"DMBenchCartpoleSwingup-v0",
+  "from_module":"digideep.environment.dmc2gym"}' --tensorboard --session-name cartpole_8_2_05_1
+session_msg: ''
+session_name: cartpole_8_2_05_1

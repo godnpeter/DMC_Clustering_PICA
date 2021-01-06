@@ -1,0 +1,9 @@
+{"meta": {"epoch": 2320, "episode": 57000, "frame": 57016320, "clock": 1606640949.799798}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 777.542016, "max": 777.542016, "sum": 777.542016}}}
+{"meta": {"epoch": 2320, "episode": 57000, "frame": 57016320, "clock": 1606640968.7241745}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 766.993264, "max": 766.993264, "sum": 766.993264}}}
+{"meta": {"epoch": 2320, "episode": 57000, "frame": 57016320, "clock": 1606640988.4469175}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 778.738322, "max": 778.738322, "sum": 778.738322}}}
+{"meta": {"epoch": 2320, "episode": 57000, "frame": 57016320, "clock": 1606641011.2195249}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 775.994825, "max": 775.994825, "sum": 775.994825}}}
+{"meta": {"epoch": 2320, "episode": 57000, "frame": 57016320, "clock": 1606641033.1748667}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 753.016378, "max": 753.016378, "sum": 753.016378}}}
+{"meta": {"epoch": 2320, "episode": 57000, "frame": 57016320, "clock": 1606641053.8168223}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 780.849812, "max": 780.849812, "sum": 780.849812}}}
+{"meta": {"epoch": 2320, "episode": 57000, "frame": 57016320, "clock": 1606641072.7989752}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 758.00854, "max": 758.00854, "sum": 758.00854}}}
+{"meta": {"epoch": 2320, "episode": 57000, "frame": 57016320, "clock": 1606641091.5391064}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 766.533875, "max": 766.533875, "sum": 766.533875}}}
+{"meta": {"epoch": 2320, "episode": 57000, "frame": 57016320, "clock": 1606641111.0130162}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 778.999767, "max": 778.999767, "sum": 778.999767}}}

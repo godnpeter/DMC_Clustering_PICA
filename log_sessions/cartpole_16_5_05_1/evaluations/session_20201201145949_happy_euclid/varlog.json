@@ -1,0 +1,3 @@
+{"meta": {"epoch": 2140, "episode": 52584, "frame": 52592640, "clock": 1606802447.2518892}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 832.390067, "max": 832.390067, "sum": 832.390067}}}
+{"meta": {"epoch": 2140, "episode": 52584, "frame": 52592640, "clock": 1606802467.9061434}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 829.923236, "max": 829.923236, "sum": 829.923236}}}
+{"meta": {"epoch": 2140, "episode": 52584, "frame": 52592640, "clock": 1606802488.2821624}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 831.114385, "max": 831.114385, "sum": 831.114385}}}

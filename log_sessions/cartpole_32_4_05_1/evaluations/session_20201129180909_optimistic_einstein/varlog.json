@@ -1,0 +1,9 @@
+{"meta": {"epoch": 2300, "episode": 56520, "frame": 56524800, "clock": 1606640974.194641}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 658.729973, "max": 658.729973, "sum": 658.729973}}}
+{"meta": {"epoch": 2300, "episode": 56520, "frame": 56524800, "clock": 1606640995.2744775}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 654.126249, "max": 654.126249, "sum": 654.126249}}}
+{"meta": {"epoch": 2300, "episode": 56520, "frame": 56524800, "clock": 1606641018.7975123}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 630.888298, "max": 630.888298, "sum": 630.888298}}}
+{"meta": {"epoch": 2300, "episode": 56520, "frame": 56524800, "clock": 1606641041.4125571}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 655.85599, "max": 655.85599, "sum": 655.85599}}}
+{"meta": {"epoch": 2300, "episode": 56520, "frame": 56524800, "clock": 1606641060.993044}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 652.344721, "max": 652.344721, "sum": 652.344721}}}
+{"meta": {"epoch": 2300, "episode": 56520, "frame": 56524800, "clock": 1606641080.6585662}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 634.457444, "max": 634.457444, "sum": 634.457444}}}
+{"meta": {"epoch": 2300, "episode": 56520, "frame": 56524800, "clock": 1606641099.826489}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 662.907098, "max": 662.907098, "sum": 662.907098}}}
+{"meta": {"epoch": 2300, "episode": 56520, "frame": 56524800, "clock": 1606641119.4293716}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 653.553739, "max": 653.553739, "sum": 653.553739}}}
+{"meta": {"epoch": 2300, "episode": 56520, "frame": 56524800, "clock": 1606641139.909656}, "data": {"/reward/eval/episodic": {"std": 0.0, "num": 1, "min": 641.724795, "max": 641.724795, "sum": 641.724795}}}
